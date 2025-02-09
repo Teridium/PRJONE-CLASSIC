@@ -9,6 +9,7 @@ from options import *
 class inv_recipe(inv):
     def __init__(self, app):
         super().__init__(app, (-3, -2), (2,5), inv_cell_h=64,  bg_color=pg.Color('#1f1f1f'), bg_hover_color=pg.Color('#2f2f2f'), inv_margin=5)
+        self.mouse_button = pg.mouse.get_pressed()
         
     
     def update(self):
@@ -44,6 +45,11 @@ class inv_recipe(inv):
                     self.clear()
         else:
             self.first_click = True
+        
+        if not self.mouse_button[0]:
+            if self.mouse_button[2]:
+                self.is_open = False
+                self.clear()
 
     
     def draw(self):

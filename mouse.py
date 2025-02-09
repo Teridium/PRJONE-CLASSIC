@@ -123,7 +123,7 @@ class mouse:
 
                 else:
 
-                    if self.first_click:
+                    if self.first_click and self.pos[0] < SC_WIDTH - P_INFO:
                         select_building = self.app.terrain.building_map[self.tile_pos[0],
                                                             self.tile_pos[1]]
                         select_terrain = self.app.terrain.field[self.tile_pos[0],

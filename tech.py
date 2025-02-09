@@ -492,7 +492,7 @@ class ui_tech:
                 if self.area.size==(1,1):
                     # click to cell
                     click_area_screen = pg.Rect((0,0),mouse_pos)
-                    if click_area_screen.colliderect(VIEW_RECT):
+                    if self.app.mouse.pos[0] < SC_WIDTH - P_INFO:
                         area_num = self.area.collidelist(self.tech_sites.rect_list_all)
                         factory_num = self.area.collidelist(self.app.factories.rect_list_all)
                         if area_num!=-1: 

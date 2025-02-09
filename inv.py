@@ -9,7 +9,7 @@ class inv:
     def __init__(self, app, player):
         self.app = app
         self.player = player
-        self.backpack = [{'id':3,'count':10},{'id':2,'count':10},{'id':5,'count':10},{'id':8,'count':10}]
+        self.backpack = []
         self.selected_backpack_cell = -1
         # self.item = {}
         # for item in range(3):
