@@ -1,0 +1,248 @@
+{
+    "defaults":
+    {
+        "colours":
+        {
+            "normal_bg":"#45494e",
+            "normal_text":"#c5cbd8"
+        },
+        "misc":
+        {
+            "border_width": "0",
+            "shadow_width": "0"
+        }        
+    },
+
+    "bordered":
+    {
+        "colours":
+        {
+            "normal_bg":"#00ff00"
+        },
+        "misc":
+        {
+            "border_width": "1"
+        }
+    },
+
+    "label_left":
+    {
+        "misc":
+        {
+            "text_horiz_alignment": "left"
+        }
+    },
+
+
+    "panel":
+    {
+        "colours":
+        {
+            
+        },
+        "misc":
+        {
+            "border_width": "0",
+            "shadow_width": "0"
+        }
+
+
+    },
+
+    "map_info":
+    {
+        "colours":
+        {
+       
+        },
+        "misc":
+        {
+            "border_width": "0",
+            "shadow_width": "1"
+        }
+
+
+    },
+
+    "panel_info":
+    {
+        "colours":
+        {
+            
+        },
+        "misc":
+        {
+            "border_width": "0",
+            "shadow_width": "1"
+        }
+
+
+    },
+
+    "textinfo":
+    {
+        "colours":
+        {
+            "normal_text":"#fbfbca"
+            
+        },
+
+        "misc":
+        {
+            "padding": "5,0",
+            "text_horiz_alignment": "left",
+            "text_vert_alignment": "center",
+            "border_width": "0",
+            "shadow_width": "0"
+        }
+
+    },
+
+    "item":
+    {
+        "colours":
+        {
+            "normal_text": "#FFFFFF",
+            "text_shadow": "#000000"
+        },
+        "font":
+        {
+            "name": "ssp",
+            "size": "11",
+            "bold": "0",
+            "italic": "0",
+            "regular_path": "fonts/SourceSansPro-Regular.ttf"
+        },
+        "misc":{
+            "text_shadow": "1",
+            "text_shadow_size": "1",
+            "text_shadow_offset": "0,0",
+            "size": "64"         
+        }
+
+    },
+
+
+    "item_label_b":
+    {
+
+        "font":
+        {
+            "name": "ssp",
+            "size": "14"
+        },
+        "misc":{
+            "size": "64"         
+        }
+
+    },
+
+    "item_label_m":
+    {
+
+        "font":
+        {
+            "name": "ssp",
+            "size": "11",
+            "bold": "0",
+            "italic": "0",
+            "regular_path": "fonts/SourceSansPro-Regular.ttf"
+        },
+        "misc":{
+            "size": "36",
+            "padding":"3,3"
+        }
+
+    },
+
+    "wnd_info_text":
+    {
+
+        "misc":
+        {
+            "border_width": "0",
+            "padding": "10,10",
+            "shadow_width": "0"
+        }
+    },
+
+    "progress_bar":
+    {
+        "colours":
+        {
+            "normal_border": "#AAAAAA",
+            "filled_bar": "#00FF00",
+            "unfilled_bar": "#6C6C6C"
+        },
+        "misc":
+        {
+            "follow_sprite_offset": "10, 10",
+            "border_width": "0"
+        }
+    },
+
+    "window": 
+    {
+        "misc": 
+        {
+            "enable_close_button": "0",
+            "border_width": "0",
+            "shadow_width": "0"
+        }
+    },
+    "del_button":
+    {
+        "colours":
+        {
+            "normal_bg": "#d02d43",
+            "normal_border": "#d02d43",
+            "normal_text": "#c5cbd8",
+
+            "hovered_bg": "#ef334c",
+            "hovered_border": "#B0B0B0",
+            "hovered_text": "#FFFFFF",
+
+            "selected_bg": "#25292e",
+            "selected_border": "#8080B0",
+            "selected_text": "#FFFFFF",
+
+            "active_bg": "#67141f",            
+            "active_border": "#67141f",
+            "active_text": "#6d736f",
+
+            "disabled_bg": "#25292e",
+            "disabled_border": "#808080"
+        }
+
+    },
+    "ok_button":
+    {
+        "colours":
+        {
+            "normal_bg": "#d02d43",
+            "normal_border": "#d02d43",
+            "normal_text": "#c5cbd8",
+
+            "hovered_bg": "#ef334c",
+            "hovered_border": "#B0B0B0",
+            "hovered_text": "#FFFFFF",
+
+            "selected_bg": "#25292e",
+            "selected_border": "#8080B0",
+            "selected_text": "#FFFFFF",
+
+            "active_bg": "#67141f",            
+            "active_border": "#67141f",
+            "active_text": "#6d736f",
+
+            "disabled_bg": "#25292e",
+            "disabled_border": "#808080"
+        }
+
+    }
+
+    
+    
+   
+
+}

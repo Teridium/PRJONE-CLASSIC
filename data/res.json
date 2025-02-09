@@ -1,0 +1,26 @@
+{
+    "tech-ui_img": [
+        {
+            "id":0,
+            "name":"border_selected",
+            "pic":"tech_border.png"
+        },
+        {
+            "id":1,
+            "name":"corner",
+            "pic":"tech_corner.png"
+        },
+        {
+            "id":2,
+            "name":"mark",
+            "pic":"tech_marks.png"
+        },
+        {
+            "id":3,
+            "name":"border",
+            "pic":"tech_border_not_active.png"
+        }
+
+
+    ]
+}

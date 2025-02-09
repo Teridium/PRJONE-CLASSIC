@@ -1,0 +1,2428 @@
+{
+    "terrain_type": [
+        {
+            "id": 0,
+            "name": "space",
+            "pic": "s1.png",
+            "allow_dig": "False"
+        },
+        {
+            "id": 1,
+            "name": "hyperspace",
+            "pic": "hs.png",
+            "allow_dig": "False"
+        },
+        {
+            "id": 2,
+            "name": "ground",
+            "pic": "e1.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 1,
+                "after": "pit",
+                "loot": [
+                    {"id":1,"count": 1}
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "name": "pit",
+            "pic": "pit.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 3,
+                "after": "deep_pit",
+                "loot": [
+                    {"id":6,"count": 1}
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "name": "sand",
+            "pic": "sand.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 0.6,
+                "after": "pit",
+                "loot": [
+                    {"id":5,"count": 1},
+                    {"id":10,"count": 1}
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "name": "deep_pit",
+            "pic": "d_pit.png",
+            "allow_dig": "False"
+        },
+        {
+            "id": 6,
+            "name": "water",
+            "pic": "water.png",
+            "allow_dig": "False"
+        },
+        {
+            "id": 7,
+            "name": "scorched_ground",
+            "pic": "scorched_g.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 1,
+                "after": "pit",
+                "loot": [
+                    {"id":1,"count": 1}
+                ]
+            }
+        },
+       {
+            "id": 8,
+            "name": "platform",
+            "pic": "platform.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 3,
+                "after": "space",
+                "loot": [
+                    {"id":14,"count": 1}
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "name": "closed_oil_well",
+            "pic": "closed_oil_well.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 1,
+                "after": "oil_well",
+                "loot": [
+                    {"id":1,"count": 1}
+                ]
+            }
+        },
+        {
+            "id": 10,
+            "name": "oil_well",
+            "pic": "oil_well.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 10,
+                "after": "oil_well",
+                "loot": [
+                    {"id":23,"count": 1}
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "name": "soil",
+            "pic": "soil.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 1,
+                "after": "pit",
+                "loot": [
+                    {"id":1,"count": 1}
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "name": "puddle",
+            "pic": "water.png",
+            "allow_dig": "False"
+        }
+
+    
+    ],
+    "block_type": [
+        {
+            "id": 0,
+            "name": "none",
+            "pic": "b1.png"
+        },
+        {
+            "id": 1,
+            "name": "mound",
+            "pic": "mound.png",
+            "demolition":1,
+            "build": {
+                "pit":
+                {
+                    "result": "soil",
+                    "type":"terrain"
+                },
+                "sand": {
+                },
+                "ground": {
+                },
+                "water":
+                {
+                    "result": "sand",
+                    "type":"terrain"
+                },
+                "puddle":
+                {
+                    "result": "sand",
+                    "type":"terrain"
+                },
+                "soil": {},
+                "platform": {}
+            }
+
+        },
+        {
+            "id": 2,
+            "name": "brick",
+            "pic": "b2.png", 
+            "demolition":1,
+            "build": {
+                "ground": {},
+                "sand": {},
+                "soil": {},
+                "platform": {}
+            }
+        },
+        {
+            "id": 3,
+            "name": "beam",
+            "pic": "beam.png",
+            "demolition":1,
+            "build": {
+                "ground": {},
+                "sand": {},
+                "soil": {},
+                "platform": {}
+            }
+        },
+        {
+            "id": 4,
+            "name": "moss",
+            "pic": "moss.png",
+            "demolition":1,
+            "build": {
+                "pit": {},
+                "soil": {}
+            }
+        },
+        {
+            "id": 5,
+            "name": "sand_mound",
+            "pic": "s_mound.png",
+            "demolition":1,
+            "build": {
+                "ground": {},
+                "sand": {},
+                "soil": {},
+                "platform": {}
+            }
+        },
+        {
+            "id": 6,
+            "name": "stone",
+            "pic": "stone.png",
+            "demolition":2,
+            "build": {
+                "ground": {},
+                "soil": {},
+                "deep_pit": {
+                    "result": "pit",
+                    "type":"terrain"
+                },
+                "platform": {}
+            }
+        },
+        {
+            "id": 7,
+            "name": "metall",
+            "pic": "metall.png",
+            "demolition":2,
+            "build": {
+                "ground": {},
+                "soil": {},
+                "platform": {}
+            }
+        },
+        {
+            "id": 8,
+            "name": "plastic",
+            "pic": "plastic.png",
+            "demolition":1.5,
+            "build": {
+                "ground": {},
+                "sand": {},
+                "soil": {},
+                "platform": {}
+            }
+        },
+        {
+            "id": 9,
+            "name": "corall",
+            "pic": "corall.png",
+            "demolition":1,
+            "build": {
+                "water": {},
+                "puddle": {}
+            }
+        },
+        {
+            "id": 10,
+            "name": "not_growed_corall",
+            "pic": "n_g_corall.png",
+            "demolition":1,
+            "build": {
+                "water": {},
+                "puddle": {}
+            }
+        },
+        {
+            "id": 11,
+            "name": "water_in_a_bucket",
+            "pic": "w_item.png",
+            "demolition":0.2,
+            "build": {
+                "pit":
+                {
+                    "result": "puddle",
+                    "type": "terrain"
+                },
+                "ground":{},
+                "sand":{},
+                "soil": {},
+                "platform": {}
+            }
+        },
+        {
+            "id": 12,
+            "name": "corall_block",
+            "pic": "corall_block.png",
+            "demolition":1.4,
+            "build": {
+                "ground":{},
+                "sand":{},
+                "soil": {},
+                "platform": {},
+                "puddle": {}
+            }
+        },
+        {
+            "id": 13,
+            "name": "pressured_moss",
+            "pic": "pressured_moss.png",
+            "demolition":1.5,
+            "build": {
+                "ground":{},
+                "sand":{},
+                "soil": {},
+                "platform": {}
+            }
+            
+        },
+            {
+            "id": 14,
+            "name": "stone-iron",
+            "pic": "s-i.png",
+            "demolition":3,
+            "build": {
+                "ground":{},
+                "soil": {},
+                "water":{
+                    "result": "platform",
+                    "type":"terrain"
+                },
+                "space":{
+                    "result": "platform",
+                    "type":"terrain"
+                },
+                "platform": {}
+            }
+            
+        },
+        {
+            "id": 15,
+            "name": "space_rock",
+            "pic": "space_rock.png",
+            "demolition":3,
+            "build": {
+                "ground":{},
+                "soil": {},
+                "platform": {}
+            }
+            
+        },
+        {
+            "id": 16,
+            "name": "data",
+            "pic": "data.png",
+            "demolition":0.1
+            
+        },
+        {
+            "id": 17,
+            "name": "asteroid_data",
+            "pic": "a_data.png",
+            "demolition":0.1
+            
+        },
+        {
+            "id": 18,
+            "name": "armored_brick",
+            "pic": "c_brick.png",
+            "demolition":1.5,
+            "build": {
+                "ground":{},
+                "soil": {},
+                "platform": {}
+            }
+            
+        },
+        {
+            "id": 19,
+            "name": "circuit",
+            "pic": "circuit.png",
+            "demolition":0.2,
+            "build": {
+                "ground":{},
+                "sand":{},
+                "soil": {},
+                "platform": {}
+            }
+            
+        },
+        {
+            "id": 20,
+            "name": "planet_data",
+            "pic": "p_data.png",
+            "demolition":0.1
+            
+        },
+        {
+            "id": 21,
+            "name": "digital_structure",
+            "pic": "d_structure.png",
+            "demolition":0.1,
+            "build": {
+                "ground":{},
+                "sand":{},
+                "water":{},
+                "soil": {},
+                "space":{},
+                "platform": {}
+            }
+            
+        },
+        {
+            "id": 22,
+            "name": "drill",
+            "pic": "drill.png",
+            "demolition":0.5,
+            "build": {
+                "ground":{},
+                "soil": {},
+                "sand":{}
+            }
+            
+        },
+        {
+            "id": 23,
+            "name": "oil_can",
+            "pic": "oil_can.png",
+            "demolition":0.2,
+            "build": {
+                "oil_well":{}
+            }
+            
+        },
+        {
+            "id": 24,
+            "name": "space_alloy",
+            "pic": "alloy.png",
+            "demolition":3,
+            "build": {
+                "ground":{},
+                "soil": {},
+                "platform": {}
+            }
+            
+        },
+        {
+            "id": 25,
+            "name": "ore",
+            "pic": "ore.png",
+            "demolition":1,
+            "build": {
+                "ground":{},
+                "soil": {},
+                "platform": {}
+            }
+            
+        },
+        {
+            "id": 26,
+            "name": "stone_pickaxe",
+            "pic": "pickaxe.png"
+            
+        },
+        {
+            "id": 27,
+            "name": "stone_hammer",
+            "pic": "hammer.png"
+            
+        },
+        {
+            "id": 28,
+            "name": "metall_pickaxe",
+            "pic": "m_pickaxe.png"
+            
+        },
+        {
+            "id": 29,
+            "name": "metall_hammer",
+            "pic": "m_hammer.png"
+            
+        },
+        {
+            "id": 30,
+            "name": "plant",
+            "pic": "plant.png",
+            "demolition":1,
+            "build": {
+                "soil": {}
+            }          
+        }
+        
+        
+    ],
+    "factory_type": [
+        {
+            "id": 0,
+            "name": "brickyard",
+            "info": "Кирпичный завод или кирпичное поле - это место или двор, где кирпичи изготавливаются, обжигаются и хранятся, а иногда продаются или иным образом распределяются.",
+            "dim": {
+                "w": 2,
+                "h": 2
+            },
+            "plan": [
+                [1,1],
+                [1,1]
+            ],
+            "pic": "brickyard.png",
+            "use_recipes": 
+            {
+                "allowed_id":[0,1],
+                "selected_id":0
+            },
+            
+            "efficiency": 1,
+            "demolition":2
+        },
+        {
+            "id": 1,
+            "name": "quarry",
+            "info": "do not worry - work in a quarry",
+            "dim": {
+                "w": 2,
+                "h": 2
+            },
+            "plan": [
+                [2,2],
+                [2,2]
+            ],
+            "use_recipes": 
+            {
+                "allowed_id":[2,3],
+                "selected_id":2
+            },
+            "pic": "quarry.png",
+            "efficiency": 1,
+            "demolition":2
+        },
+        {
+            "id": 2,
+            "name": "miller",
+            "dim": {
+                "w": 1,
+                "h": 3
+            },
+            "plan": [
+                [1],
+                [2],
+                [1]
+            ],
+            "use_recipes": 
+            {
+                "allowed_id":[4,31],
+                "selected_id":4
+            },
+            "pic": "miller.png",
+            "efficiency": 1,
+            "demolition":2.5
+        },
+        {
+            "id": 3,
+            "name": "moss_farm",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [2,3,3,2],
+                [3,4,4,3],
+                [3,4,4,3],
+                [2,3,3,2]               
+            ],
+            "pic": "moss_farm.png",
+            "use_recipes": 
+            {
+                "allowed_id":[5],
+                "selected_id":5
+            },
+            "efficiency": 1,
+            "demolition":6
+        },
+        {
+            "id": 4,
+            "name": "mine",
+            "dim": {
+                "w": 3,
+                "h": 2
+            },
+            "plan": [
+                [6,3,4],
+                [6,3,4]               
+            ],
+            "pic": "mine.png",
+            "use_recipes": 
+            {
+                "allowed_id":[6],
+                "selected_id":6
+            },
+            "efficiency": 1,
+            "demolition":3
+        },
+        {
+            "id": 5,
+            "name": "forge",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [6,2,2,6],
+                [6,6,6,6],
+                [6,6,6,6],
+                [6,2,2,6]                  
+            ],
+            "pic": "forge.png",
+            "use_recipes": 
+            {
+                "allowed_id":[7,22],
+                "selected_id":22
+            },
+            "efficiency": 1,
+            "demolition": 8
+        },
+        {
+            "id": 6,
+            "name": "plastic_factory",
+            "dim": {
+                "w": 3,
+                "h": 5
+            },
+            "plan": [
+                [2,3,2],
+                [3,6,7],
+                [2,3,2],
+                [7,6,3],
+                [2,3,2]                  
+            ],
+            "pic": "plastic_f.png",
+            "use_recipes": 
+            {
+                "allowed_id":[8],
+                "selected_id":8
+            },
+            "efficiency": 1,
+            "demolition": 7.5
+        },
+        {
+            "id": 7,
+            "name": "roboport",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [2,3,2],
+                [3,5,3],
+                [2,3,2]
+            ],
+            
+            "pic": "roboport.png",
+            "efficiency": 1,
+            "demolition": 4.5,
+            "operate": 10
+        },
+        {
+            "id": 8,
+            "name": "escape_pod",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "pic": "escape_pod.png",
+            "efficiency": 1,
+            "demolition": 10,
+            "detect": 12,
+            "operate": 8,
+            "storage":10
+        },
+        {
+            "id": 9,
+            "name": "labaratory",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [6,6,7,8],
+                [6,7,7,7],
+                [6,7,7,7],
+                [6,6,7,8]
+            ],
+            "pic": "labaratory.png",
+            "efficiency": 1,
+            "demolition": 8,
+            "detect": 5,
+            "operate": 3,
+            "use_recipes": 
+            {
+                "allowed_id":[9,21,20,19],
+                "selected_id":9
+            }
+        },
+        {
+            "id": 10,
+            "name": "radar",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [2,7,2],
+                [7,8,7],
+                [2,7,2]
+            ],
+            "pic": "radar.png",
+            "efficiency": 1,
+            "demolition": 4.5,
+            "detect": 15
+        },
+        {
+            "id": 11,
+            "name": "corall_farm",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [8,8,8,8],
+                [7,9,9,8],
+                [7,9,9,8],
+                [8,8,8,8]
+            ],
+            "pic": "corall_f.png",
+            "efficiency": 1,
+            "demolition": 8,
+            "use_recipes": 
+            {
+                "allowed_id":[10],
+                "selected_id":10
+            }
+        },
+        {
+            "id": 12,
+            "name": "pump",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [8,8,0],
+                [4,7,3],
+                [8,8,0]
+            ],
+            "pic": "pump.png",
+            "efficiency": 1,
+            "demolition": 4.5,
+            "use_recipes": 
+            {
+                "allowed_id":[12],
+                "selected_id":12
+            }
+        },
+        {
+            "id": 13,
+            "name": "corall_press",
+            "dim": {
+                "w": 5,
+                "h": 5
+            },
+            "plan": [
+                [2,3,7,3,2],
+                [3,9,9,9,3],
+                [7,9,9,9,7],
+                [3,9,9,9,3],
+                [2,3,7,3,2]
+            ],
+            "pic": "corall_p.png",
+            "efficiency": 1,
+            "demolition": 12.5,
+            "use_recipes": 
+            {
+                "allowed_id":[11],
+                "selected_id":11
+            }
+        },
+        {
+            "id": 14,
+            "name": "moss_press",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [6,9,9,6],
+                [7,4,4,7],
+                [7,4,4,7],
+                [6,9,9,6]
+            ],
+            "pic": "moss_press.png",
+            "efficiency": 1,
+            "demolition": 8,
+            "use_recipes": 
+            {
+                "allowed_id":[13],
+                "selected_id":13
+            }
+        },
+           {
+            "id": 15,
+            "name": "combiner",
+            "dim": {
+                "w": 7,
+                "h": 3
+            },
+            "plan": [
+                [2,6,3,7,3,8,2],
+                [2,6,3,7,3,8,13],
+                [2,6,3,7,3,8,2]
+            ],
+            "pic": "combiner.png",
+            "efficiency": 1,
+            "demolition": 10.5,
+            "use_recipes": 
+            {
+                "allowed_id":[14],
+                "selected_id":14
+            }
+        },
+        {
+            "id": 16,
+            "name": "washer",
+            "dim": {
+                "w": 5,
+                "h": 3
+            },
+            "plan": [
+                [4,4,4,11,8],
+                [6,6,6,11,8],
+                [7,7,7,7,8]
+            ],
+            "pic": "washer.png",
+            "efficiency": 1,
+            "demolition": 7.5,
+            "use_recipes": 
+            {
+                "allowed_id":[15],
+                "selected_id":15
+            }
+        },
+        {
+            "id": 17,
+            "name": "rocket_silo",
+            "dim": {
+                "w": 6,
+                "h": 4
+            },
+            "plan": [
+                [12,14,14,14,14,12],
+                [13,14,0,0,14,13],
+                [13,14,0,0,14,13],
+                [12,14,14,14,14,12]
+            ],
+            "pic": "rocket_silo.png",
+            "efficiency": 1,
+            "demolition": 15,
+            "use_recipes": 
+            {
+                "allowed_id":[17,18],
+                "selected_id":17
+            }
+        },
+        {
+            "id": 18,
+            "name": "observatory",
+            "dim": {
+                "w": 8,
+                "h": 8
+            },
+            "plan": [
+                [14,7,7,7,7,7,7,14],
+                [7,7,8,14,14,8,7,7],
+                [7,8,12,14,14,12,8,7],
+                [7,14,14,15,15,14,14,7],
+                [7,14,14,15,15,14,14,7],
+                [7,8,12,14,14,12,8,7],
+                [7,7,8,14,14,8,7,7],
+                [14,7,7,7,7,7,7,14]
+            ],
+            "pic": "a_observatory.png",
+            "efficiency": 1,
+            "demolition": 32,
+            "use_recipes": 
+            {
+                "allowed_id":[26],
+                "selected_id":26
+            }
+        },
+        {
+            "id": 19,
+            "name": "brick_compressor",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [15,6,13,15],
+                [3,3,3,3],
+                [11,2,2,11],
+                [3,3,3,3]
+            ],
+            "pic": "b_compressor.png",
+            "efficiency": 1,
+            "demolition": 8,
+            "use_recipes": 
+            {
+                "allowed_id":[27],
+                "selected_id":27
+            }
+        },
+        {
+            "id": 20,
+            "name": "brickyard_2",
+            "dim": {
+                "w": 2,
+                "h": 2
+            },
+            "plan": [
+                [9,11],
+                [12,11]
+            ],
+            "pic": "brickyard2.png",
+            "use_recipes": 
+            {
+                "allowed_id":[0,1],
+                "selected_id":0
+            },
+            "efficiency": 2,
+            "demolition":2
+        },
+        {
+            "id": 21,
+            "name": "quarry_2",
+            "dim": {
+                "w": 2,
+                "h": 2
+            },
+            "plan": [
+                [13,11],
+                [13,12]
+            ],
+            "pic": "quarry2.png",
+            "use_recipes": 
+            {
+                "allowed_id":[2,3],
+                "selected_id":2
+            },
+            
+            "efficiency": 2,
+            "demolition":2
+        },
+        {
+            "id": 22,
+            "name": "miller_2",
+            "dim": {
+                "w": 1,
+                "h": 3
+            },
+            "plan": [
+                [13],
+                [11],
+                [12]
+            ],
+            "pic": "miller2.png",
+            "use_recipes": 
+            {
+                "allowed_id":[4,31],
+                "selected_id":4
+            },
+            "efficiency": 2,
+            "demolition":1.5
+        },
+        {
+            "id": 23,
+            "name": "moss_farm_2",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [12,13,13,12],
+                [13,11,11,13],
+                [13,11,11,13],
+                [12,13,13,12]               
+            ],
+            "pic": "moss_farm2.png",
+            "use_recipes": 
+            {
+                "allowed_id":[5],
+                "selected_id":5
+            },
+            "efficiency": 2,
+            "demolition":6
+        },
+        {
+            "id": 24,
+            "name": "mine2",
+            "dim": {
+                "w": 3,
+                "h": 2
+            },
+            "plan": [
+                [14,12,13],
+                [14,12,13]               
+            ],
+            "pic": "mine2.png",
+            "use_recipes": 
+            {
+                "allowed_id":[6,16],
+                "selected_id":16
+            },
+            "efficiency": 2,
+            "demolition":3
+        },
+        {
+            "id": 25,
+            "name": "forge2",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [14,13,13,14],
+                [14,11,11,14],
+                [14,11,11,14],
+                [14,13,13,14]                  
+            ],
+            "pic": "forge2.png",
+            "use_recipes": 
+            {
+                "allowed_id":[7,22],
+                "selected_id":22
+            },
+            "efficiency": 2,
+            "demolition": 8
+        },
+        {
+            "id": 26,
+            "name": "plastic_factory2",
+            "dim": {
+                "w": 3,
+                "h": 5
+            },
+            "plan": [
+                [12,7,12],
+                [7,11,14],
+                [12,7,12],
+                [14,11,7],
+                [12,7,12]                  
+            ],
+            "pic": "plastic_f2.png",
+            "use_recipes": 
+            {
+                "allowed_id":[8],
+                "selected_id":8
+            },
+            "efficiency": 2,
+            "demolition": 7.5
+        },
+        {
+            "id": 27,
+            "name": "big_roboport",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [14,12,14],
+                [12,11,12],
+                [14,12,14]
+            ],
+            "pic": "b_roboport.png",
+            "efficiency": 2,
+            "demolition": 4.5,
+            "operate": 25
+        },
+        {
+            "id": 28,
+            "name": "hub",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [14,14,14,14],
+                [14,14,14,14],
+                [14,14,14,14],
+                [14,14,14,14]
+            ],   
+            "pic": "hub.png",
+            "efficiency": 1,
+            "demolition": 10,
+            "storage":20,
+            "detect": 20,
+            "operate": 15
+        },
+        {
+            "id": 29,
+            "name": "labaratory_2",
+            "dim": {
+                "w": 4,
+                "h": 4
+            },
+            "plan": [
+                [14,14,13,12],
+                [14,13,13,13],
+                [14,13,13,13],
+                [14,14,13,12]
+            ],
+            "pic": "labaratory2.png",
+            "efficiency": 2,
+            "demolition": 8,
+            "detect": 5,
+            "operate": 4,
+            "use_recipes": 
+            {
+                "allowed_id":[9,21,20,19],
+                "selected_id":9
+            }
+        },
+        {
+            "id": 30,
+            "name": "radar_2",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [14,12,14],
+                [12,13,12],
+                [14,12,14]
+            ],
+            "pic": "radar2.png",
+            "efficiency": 2,
+            "demolition": 4.5,
+            "detect": 25
+        },
+        {
+            "id": 31,
+            "name": "suface_scanner",
+            "dim": {
+                "w": 5,
+                "h": 5
+            },
+            "plan": [
+                [14,13,2,13,14],
+                [13,4,15,4,13],
+                [2,4,1,4,2],
+                [13,4,15,4,13],
+                [14,13,2,13,14]
+            ],
+            "pic": "surf_sc.png",
+            "efficiency": 1,
+            "demolition": 10.5,
+            "use_recipes": 
+            {
+                "allowed_id":[36],
+                "selected_id":36
+            }
+        },
+        {
+            "id": 32,
+            "name": "scanner_3000",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [18,18,18],
+                [18,19,18],
+                [18,18,18]
+            ],
+            "pic": "scanner_3000.png",
+            "efficiency": 1,
+            "demolition": 1,
+            "detect": 20,
+            "use_recipes": 
+            {
+                "allowed_id":[37],
+                "selected_id":37
+            }
+        },
+        {
+            "id": 33,
+            "name": "circuit_factory",
+            "dim": {
+                "w": 5,
+                "h": 3
+            },
+            "plan": [
+                [7,2,2,13,2],
+                [7,14,14,11,8],
+                [7,2,2,13,2]
+            ],
+            "pic": "circuit_f.png",
+            "efficiency": 1,
+            "demolition": 7.5,
+            "use_recipes": 
+            {
+                "allowed_id":[38],
+                "selected_id":38
+            }
+        },
+        {
+            "id": 34,
+            "name": "compact_drill",
+            "dim": {
+                "w": 1,
+                "h": 2
+            },
+            "plan": [
+                [19],
+                [22]
+            ],
+            "pic": "c_drill.png",
+            "efficiency": 1,
+            "demolition": 1,
+            "use_recipes": 
+            {
+                "allowed_id":[5],
+                "selected_id":5
+            }
+        },
+        {
+            "id": 35,
+            "name": "drill_factory",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [14,19,8],
+                [14,19,8],
+                [14,8,7]
+            ],
+            "pic": "drill_f.png",
+            "efficiency": 1,
+            "demolition": 7.5,
+            "use_recipes": 
+            {
+                "allowed_id":[39],
+                "selected_id":39
+            }
+        },
+        {
+            "id": 36,
+            "name": "mega_pump",
+            "dim": {
+                "w": 5,
+                "h": 5
+            },
+            "plan": [
+                [0,18,19,18,0],
+                [18,8,14,8,18],
+                [19,14,11,14,19],
+                [18,8,14,8,18],
+                [0,18,19,18,0]
+            ],
+            "pic": "mega_pump.png",
+            "efficiency": 2,
+            "demolition": 10.5,
+            "use_recipes": 
+            {
+                "allowed_id":[40,12],
+                "selected_id":40
+            }
+        },
+        {
+            "id": 37,
+            "name": "cosmic_forge",
+            "dim": {
+                "w": 5,
+                "h": 5
+            },
+            "plan": [
+                [18,18,18,18,18],
+                [18,14,14,14,18],
+                [18,14,3,14,18],
+                [18,14,14,14,18],
+                [18,18,18,18,18]
+            ],
+            "pic": "cosmic_forge.png",
+            "efficiency": 1,
+            "demolition": 10.5,
+            "use_recipes": 
+            {
+                "allowed_id":[41],
+                "selected_id":41
+            }
+        },
+        {
+            "id": 38,
+            "name": "oil_pump",
+            "dim": {
+                "w": 3,
+                "h": 3
+            },
+            "plan": [
+                [8,14,2],
+                [8,23,7],
+                [8,14,2]
+            ],
+            "pic": "oil_pump.png",
+            "efficiency": 1,
+            "demolition": 4.5,
+            "use_recipes": 
+            {
+                "allowed_id":[25],
+                "selected_id":25
+            }
+        },
+        {
+            "id": 39,
+            "name": "oil_refinery",
+            "dim": {
+                "w": 4,
+                "h": 3
+            },
+            "plan": [
+                [2,2,2,6],
+                [7,3,6,3],
+                [2,2,2,6]
+            ],
+            "pic": "oil_refinery.png",
+            "efficiency": 1,
+            "demolition": 4.5,
+            "use_recipes": 
+            {
+                "allowed_id":[23,24],
+                "selected_id":23
+            }
+        },
+        {
+            "id": 40,
+            "name": "workbench",
+            "dim": {
+                "w": 2,
+                "h": 3
+            },
+            "plan": [
+                [2,2],
+                [6,3],
+                [2,4]
+            ],
+            "pic": "workbench.png",
+            "efficiency": 1,
+            "demolition": 4.5,
+            "use_recipes": 
+            {
+                "allowed_id":[32,33,34,35],
+                "selected_id":32
+            }
+        }
+    ],
+    "recipes" : [
+      {
+        "id":0,
+        "name":"firing_bricks",
+        "pic": "b2.png",
+        "time":5,
+        "in": 
+        [              
+            {
+                "id": 1,
+                "count": 2
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 2 , 
+                "count": 1
+            }
+        ]
+      },
+      {
+        "id":1,
+        "name":"firing_bricks_with_sand",
+        "pic": "b2.png",
+        "time":5,
+        "in": 
+        [              
+            {
+                "id": 5,
+                "count": 3
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 2 , 
+                "count": 2
+            }
+        ]
+      },
+      {
+        "id":2,
+        "name":"mound_mining",
+        "pic": "mound.png",
+        "time":5,
+        "out":
+        [
+            {
+                "id": 1 , 
+                "count": 1
+            }
+        ]
+      },
+      {
+        "id":3,
+        "name":"sand_mining",
+        "pic": "s_mound.png",
+        "time":6,
+        "out":
+        [
+            {
+                "id": 5 , 
+                "count": 1
+            }
+        ]
+      },
+      {
+        "id":4,
+        "name":"brick_milling",
+        "pic": "beam.png",
+        "time":8,
+        "in": 
+        [              
+            {
+                "id": 2,
+                "count": 1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 3 , 
+                "count": 4
+            }
+        ]
+      },
+      {
+        "id":5,
+        "name":"moss_farming",
+        "pic": "moss.png",
+        "time":20,
+        "out":
+        [
+            {
+                "id": 4 , 
+                "count": 24
+            }
+        ]
+      },
+      {
+        "id":6,
+        "name":"stone_mining",
+        "pic": "stone.png",
+        "time":15,
+        "in": 
+        [              
+            {
+                "id": 4,
+                "count": 5
+            },
+            {
+                "id":26,
+                "count":1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 6 , 
+                "count": 5
+            },
+            {
+                "id":26,
+                "count":1
+            }
+        ]
+      },
+      {
+        "id":7,
+        "name":"stone_smelting",
+        "pic": "b2.png",
+        "time":15,
+        "in": 
+        [              
+            {
+                "id": 6,
+                "count": 3
+            },
+            {
+                "id":27,
+                "count":1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 2, 
+                "count": 3
+            },
+            {
+                "id":27,
+                "count":1
+            }
+        ]
+      },
+      {
+        "id":8,
+        "name":"plastic_crafting",
+        "pic": "plastic.png",
+        "time":15,
+        "in": 
+        [              
+            {
+                "id": 23,
+                "count": 10
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 8 , 
+                "count": 1
+            }
+        ]
+      },
+      {
+        "id":9,
+        "name":"coralls_finding",
+        "pic": "n_g_corall.png",
+        "time":20,
+        "in": 
+        [              
+            {
+                "id": 5,
+                "count": 5
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 10 , 
+                "count": 2
+            }
+        ]
+      },
+      {
+        "id":10,
+        "name":"coralls_growing",
+        "pic": "corall.png",
+        "time":20,
+        "in": 
+        [              
+            {
+                "id": 10,
+                "count": 4
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 9 , 
+                "count": 4
+            }
+        ]
+      },
+      {
+        "id":11,
+        "name":"coralls_pressing",
+        "pic": "c_brick.png",
+        "time":24,
+        "in": 
+        [              
+            {
+                "id": 9,
+                "count": 9
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 12 , 
+                "count": 2
+            }
+        ]
+      },
+      {
+        "id":12,
+        "name":"water_pumping",
+        "pic": "w_item.png",
+        "time":15,
+        "out":
+        [
+            {
+                "id": 11 , 
+                "count": 3
+            }
+        ]
+      },
+      {
+        "id":13,
+        "name":"moss_pressing",
+        "pic": "pressured_moss.png",
+        "time":10,
+        "in": 
+        [              
+            {
+                "id": 2,
+                "count": 2
+            },
+            {
+                "id": 4,
+                "count": 3
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 13 , 
+                "count": 2
+            }
+        ]
+      },
+      {
+        "id":14,
+        "name":"stone-iron_combining",
+        "pic": "s-i.png",
+        "time":15,
+        "in": 
+        [              
+            {
+                "id": 6,
+                "count": 7
+            },
+            {
+                "id":29,
+                "count":1
+            },
+            {
+                "id": 7,
+                "count": 6
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 14 , 
+                "count": 2
+            },
+            {
+                "id":29,
+                "count":1
+            }
+        ]
+      },
+      {
+        "id":15,
+        "name":"mound_washing",
+        "pic": "sand.png",
+        "time":5,
+        "in": 
+        [              
+            {
+                "id": 1,
+                "count": 10
+            },
+            {
+                "id": 11,
+                "count": 10
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 5 , 
+                "count": 9
+            },
+            {
+                "id": 11,
+                "count": 1
+            }
+        ]
+      },
+      {
+        "id":16,
+        "name":"ore_mining",
+        "pic": "ore.png",
+        "time":20,
+        "in": 
+        [              
+            {
+                "id": 4,
+                "count": 10
+            },
+            {
+                "id":28,
+                "count":1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 25 , 
+                "count": 5
+            },
+            {
+                "id":28,
+                "count":1
+            }
+        ]
+      },
+      {
+        "id":17,
+        "name":"cargo_rocket_launch",
+        "pic": "space_rock.png",
+        "time":500,
+        "in": 
+        [              
+            {
+                "id": 14,
+                "count": 100
+            },
+            {
+                "id": 7,
+                "count": 20
+            },
+            {
+                "id": 23,
+                "count": 500
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 15 , 
+                "count": 20
+            }
+        ]
+      },
+      {
+        "id":18,
+        "name":"sciece_rocket_launch",
+        "pic": "a_data.png",
+        "time":360,
+        "in": 
+        [              
+            {
+                "id": 14,
+                "count": 100
+            },
+            {
+                "id": 7,
+                "count": 20
+            },
+            {
+                "id": 23,
+                "count": 500
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 17 , 
+                "count": 20
+            },
+            {
+                "id": 16 , 
+                "count": 10
+            }
+        ]
+      },
+      {
+        "id":19,
+        "name":"base_material_research",
+        "pic": "data.png",
+        "time":60,
+        "in": 
+        [              
+            {
+                "id": 2,
+                "count": 20
+            },
+            {
+                "id": 3,
+                "count": 20
+            },
+            {
+                "id": 7,
+                "count": 20
+            },
+            {
+                "id": 8,
+                "count": 20
+            },
+            {
+                "id": 8,
+                "count": 20
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 16 , 
+                "count": 5
+            }
+        ]
+      },
+      { 
+        "id":20,
+        "name":"mid_material_research",
+        "pic": "data.png",
+        "time":80,
+        "in": 
+        [              
+            {
+                "id": 9,
+                "count": 20
+            },
+            {
+                "id": 10,
+                "count": 20
+            },
+            {
+                "id": 12,
+                "count": 20
+            },
+            {
+                "id": 13,
+                "count": 20
+            },
+            {
+                "id": 14,
+                "count": 20
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 16 , 
+                "count": 10
+            }
+        ]
+      },
+      { 
+        "id":21,
+        "name":"data_research",
+        "pic": "data.png",
+        "time":60,
+        "in": 
+        [              
+            {
+                "id": 17,
+                "count": 10
+            },
+            {
+                "id": 20,
+                "count": 10
+            },
+            {
+                "id": 26,
+                "count": 10
+            },
+            {
+                "id": 27,
+                "count": 10
+            },
+            {
+                "id": 28,
+                "count": 10
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 16 , 
+                "count": 60
+            }
+        ]
+      },
+      { 
+        "id":22,
+        "name":"ore_smelting",
+        "pic": "metall.png",
+        "time":10,
+        "in": 
+        [              
+            {
+                "id": 25,
+                "count": 2
+            },
+            {
+                "id":27,
+                "count":1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 7 , 
+                "count": 1
+            },
+            {
+                "id":27,
+                "count":1
+            }
+        ]
+      },
+      { 
+        "id":23,
+        "name":"oil_squeezing_with_moss",
+        "pic": "oil_can.png",
+        "time":20,
+        "in": 
+        [              
+            {
+                "id": 4,
+                "count": 20
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 23, 
+                "count": 10
+            }
+        ]
+      },
+      { 
+        "id":24,
+        "name":"oil_squeezing_with_coralls",
+        "pic": "oil_can.png",
+        "time":15,
+        "in": 
+        [              
+            {
+                "id": 9,
+                "count": 10
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 23, 
+                "count": 10
+            }
+        ]
+      },
+      { 
+        "id":25,
+        "name":"oil_pumping",
+        "pic": "oil_can.png",
+        "time":10,
+        "out":
+        [
+            {
+                "id": 23, 
+                "count": 10
+            }
+        ]
+      },
+      { 
+        "id":26,
+        "name":"asteroid_analysing",
+        "pic": "a_data.png",
+        "time":60,
+        "in": 
+        [              
+            {
+                "id": 15,
+                "count": 1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 17, 
+                "count": 10
+            }
+        ]
+      },
+      { 
+        "id":27,
+        "name":"brick_compressing",
+        "pic": "c_brick.png",
+        "time":10,
+        "in": 
+        [
+            {
+                "id": 13,
+                "count": 2
+            },
+            {
+                "id": 8,
+                "count": 2
+            },
+            {
+                "id": 16,
+                "count": 1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 18, 
+                "count": 1
+            }
+        ]
+      },
+      { 
+        "id":28,
+        "name":"circuit_printing",
+        "pic": "circuit.png",
+        "time":15,
+        "in": 
+        [
+            {
+                "id": 7,
+                "count": 1
+            },
+            {
+                "id": 8,
+                "count": 1
+            },
+            {
+                "id": 16,
+                "count": 1
+            }  
+        ],
+        "out":
+        [
+            {
+                "id": 19 , 
+                "count": 3
+            }
+        ]
+      },
+      { 
+        "id":29,
+        "name":"suface_scanning",
+        "pic": "p_data.png",
+        "time":60,
+        "in": 
+        [
+            {
+                "id": 1,
+                "count": 10
+            },
+            {
+                "id": 5,
+                "count": 8
+            },
+            {
+                "id": 6,
+                "count": 3
+            },
+            {
+                "id": 11,
+                "count": 5
+            },
+            {
+                "id": 16,
+                "count": 5
+            }  
+        ],
+        "out":
+        [
+            {
+                "id": 20, 
+                "count": 3
+            }
+        ]
+      },
+      { 
+        "id":30,
+        "name":"space_rock_smelting",
+        "pic": "alloy.png",
+        "time":20,
+        "in": 
+        [
+            {
+                "id": 15,
+                "count": 10
+            },
+            {
+                "id": 29,
+                "count": 1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 7, 
+                "count": 3
+            },
+            {
+                "id": 14, 
+                "count": 5
+            },
+            {
+                "id": 24, 
+                "count": 1
+            },
+            {
+                "id": 29,
+                "count": 1
+            }             
+        ]
+      },
+      { 
+        "id":31,
+        "name":"stone_milling",
+        "pic": "ore.png",
+        "time":12,
+        "in": 
+        [
+            {
+                "id": 6,
+                "count": 5
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 25, 
+                "count": 2
+            },
+            {
+                "id": 1, 
+                "count": 1
+            },
+            {
+                "id": 5, 
+                "count": 2
+            }                     
+        ]
+      },
+      { 
+        "id":32,
+        "name":"stone_pickaxe_crafting",
+        "pic": "pickaxe.png",
+        "time":10,
+        "in": 
+        [
+            {
+                "id": 6,
+                "count": 8
+            },
+            {
+                "id": 3,
+                "count": 5
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 26, 
+                "count": 1
+            }         
+        ]
+      },
+      { 
+        "id":33,
+        "name":"stone_hammer_crafting",
+        "pic": "hammer.png",
+        "time":10,
+        "in": 
+        [
+            {
+                "id": 6,
+                "count": 10
+            },
+            {
+                "id": 3,
+                "count": 4
+            },
+            {
+                "id": 2,
+                "count": 2
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 27, 
+                "count": 1
+            }         
+        ]
+      },
+      { 
+        "id":34,
+        "name":"metall_pickaxe_crafting",
+        "pic": "m_pickaxe.png",
+        "time":15,
+        "in": 
+        [
+            {
+                "id": 7,
+                "count": 5
+            },
+            {
+                "id": 3,
+                "count": 6
+            },
+            {
+                "id": 2,
+                "count": 2
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 28, 
+                "count": 1
+            }         
+        ]
+      },
+      { 
+        "id":35,
+        "name":"metall_hammer_crafting",
+        "pic": "m_hammer.png",
+        "time":15,
+        "in": 
+        [
+            {
+                "id": 7,
+                "count": 8
+            },
+            {
+                "id": 3,
+                "count": 5
+            },
+            {
+                "id": 2,
+                "count": 3
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 29, 
+                "count": 1
+            }         
+        ]
+      },
+      { 
+        "id":36,
+        "name":"surface_scanning",
+        "pic": "p_data.png",
+        "time":60,
+        "in": 
+        [
+            {
+                "id": 1,
+                "count": 50
+            },
+            {
+                "id": 5,
+                "count": 40
+            },
+            {
+                "id": 6,
+                "count": 30
+            },
+            {
+                "id": 16,
+                "count": 10
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 20, 
+                "count": 1
+            }         
+        ]
+      },
+      { 
+        "id":37,
+        "name":"planning",
+        "pic": "d_structure.png",
+        "time":1,
+        "out":
+        [
+            {
+                "id": 21, 
+                "count": 1
+            }         
+        ]
+      },
+      { 
+        "id":38,
+        "name":"circuit_factoring",
+        "pic": "circuit.png",
+        "time":25,
+        "in": 
+        [
+            {
+                "id": 8,
+                "count": 5
+            },
+            {
+                "id": 7,
+                "count": 2
+            },
+            {
+                "id": 16,
+                "count": 1
+            },
+            {
+                "id": 12,
+                "count": 1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 19, 
+                "count": 3
+            }         
+        ]
+      },
+      { 
+        "id":39,
+        "name":"drill_production",
+        "pic": "drill.png",
+        "time":40,
+        "in": 
+        [
+            {
+                "id": 16,
+                "count": 3
+            },
+            {
+                "id": 7,
+                "count": 10
+            },
+            {
+                "id": 8,
+                "count": 3
+            },
+            {
+                "id": 14,
+                "count": 10
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 22, 
+                "count": 1
+            }         
+        ]
+      },
+      { 
+        "id":40,
+        "name":"mega_pumping",
+        "pic": "water.png",
+        "time":15,
+        "in": 
+        [
+            {
+                "id": 16,
+                "count": 1
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 11, 
+                "count": 35
+            }         
+        ]
+      },
+      { 
+        "id":41,
+        "name":"alloy_forging",
+        "pic": "alloy.png",
+        "time":120,
+        "in": 
+        [
+            {
+                "id": 7,
+                "count": 50
+            },
+            {
+                "id": 15,
+                "count": 5
+            },
+            {
+                "id": 16,
+                "count": 5
+            },
+            {
+                "id":29,
+                "count":10
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 24, 
+                "count": 10
+            },
+            {
+                "id":29,
+                "count":10
+            }         
+        ]
+      }
+    ]
+}
