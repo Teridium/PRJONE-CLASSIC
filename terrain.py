@@ -44,6 +44,9 @@ class terrain:
         for i in range(5000):
             self.field[rnd.randint(0, PLANET_WIDTH-1),
                        rnd.randint(0, PLANET_HIGHT-1)] = 4
+        for i in range(5000):
+            self.field[rnd.randint(0, PLANET_WIDTH-1),
+                       rnd.randint(0, PLANET_HIGHT-1)] = 13
       
         for i in range(500):
             self.field[rnd.randint(0, PLANET_WIDTH-1),
@@ -56,7 +59,7 @@ class terrain:
         for i in range(7000):
             x,y=rnd.randint(0, PLANET_WIDTH-1), rnd.randint(0, PLANET_HIGHT-1)
             self.building_map[x,y] = 6
-            self.field[x,y] = 2
+            self.field[x,y] = 13
         for i in range(7000):
             x,y=rnd.randint(0, PLANET_WIDTH-1), rnd.randint(0, PLANET_HIGHT-1)
             self.building_map[x,y] = 4
@@ -65,7 +68,11 @@ class terrain:
             x,y=rnd.randint(0, PLANET_WIDTH-1), rnd.randint(0, PLANET_HIGHT-1)
             self.building_map[x,y] = 10
             self.field[x,y] = 12
-        for i in range(25000):
+        for i in range(5000):
+            x,y=rnd.randint(0, PLANET_WIDTH-1), rnd.randint(0, PLANET_HIGHT-1)
+            self.building_map[x,y] = 25
+            self.field[x,y] = 13
+        for i in range(15000):
             x,y=rnd.randint(0, PLANET_WIDTH-1), rnd.randint(0, PLANET_HIGHT-1)
             self.field[x,y] = 6
             self.building_map[x,y] = 0

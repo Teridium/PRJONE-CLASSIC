@@ -187,7 +187,7 @@ class corall_b_dying:
         self.active = True
 
     def update(self):
-        if self.timer.get_ticks()-self.time > 20000:
+        if self.timer.get_ticks()-self.time > 5000:
             terra = self.app.terrain
             if terra.humidity_around(self.pos) == False:
                 if terra.building_map[self.pos] == terra.GetBData('name', 'corall_block')['id']:
