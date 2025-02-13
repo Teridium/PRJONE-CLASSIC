@@ -113,7 +113,7 @@ class mouse:
                         # build
                         if self.app.terrain.building_map[self.tile_pos[0], self.tile_pos[1]] == 0:
                             self.app.player.build(self.app.terrain)
-                            if self.app.terrain.building_map[self.tile_pos] == self.app.terrain.GetBData('name', 'not_growed_corall')['id']:
+                            if self.app.terrain.building_map[self.tile_pos] == self.app.terrain.GetBData('name', 'corall_spores')['id']:
                                     self.app.corall_growings.add(self.tile_pos)
                             self.app.terrain.complete_factory()
                             if self.app.terrain.field[self.tile_pos] == self.app.terrain.GetTData('name', 'soil')['id']:

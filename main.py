@@ -11,6 +11,7 @@ from factory import *
 from waterfall import *
 from tech import *
 from data import *
+from music import *
 
 class game:
     def __init__(self):
@@ -40,6 +41,7 @@ class game:
         self.corall_b_dyings = corall_b_dyings(self)
         self.ui_tech_bp = UI_tech_blueprints(self)
         self.ui_tech = ui_tech(self)
+        self.music = music()
         self.clear_modal()
                 
     def update(self, dt):
@@ -57,6 +59,7 @@ class game:
         self.ui_tech.update()
         self.ui_tech_bp.update()
         self.inv_recipe.update()
+        self.music.update()
         
     
     def draw(self):

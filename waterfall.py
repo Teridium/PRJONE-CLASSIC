@@ -113,7 +113,7 @@ class corall_growing:
     def update(self):
         if self.timer.get_ticks()-self.time > 20000:
             terra = self.app.terrain
-            if terra.building_map[self.pos] == terra.GetBData('name', 'not_growed_corall')['id']:
+            if terra.building_map[self.pos] == terra.GetBData('name', 'corall_spores')['id']:
                 terra.building_map[self.pos] = terra.GetBData('name', 'corall')['id']
                 if terra.field[self.pos] == terra.GetTData('name', 'puddle')['id']:   
                     terra.field[self.pos] = terra.GetTData('name', 'pit')['id']

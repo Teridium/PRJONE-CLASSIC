@@ -104,7 +104,7 @@ class player:
         
     def fall(self, pos):
         terra = self.app.terrain
-        bp = terra.GetFData('name', 'escape_pod')
+        bp = terra.GetFData('name', 'Escape pod')
         b_map = terra.building_map
         factory=self.app.factories.add(bp, b_map, pos[0], pos[1])
         # bp = terra.GetFData('name', 'quarry_2')
@@ -131,6 +131,7 @@ class player:
             r = randrange(0, rad)
             x,y = round(pos[0]+r * cos(angle)-0.5), round(pos[1]+r * sin(angle)-0.5)
             self.app.terrain.field[x,y] = self.app.terrain.GetTData('name', 'scorched_ground')['id']
+            self.app.terrain.building_map[x,y] = 0
     def add_water(self, pos, rad):
         angle = randrange(0, 360)
         x = rad * cos(angle)

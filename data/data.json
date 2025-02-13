@@ -132,8 +132,15 @@
         {
             "id": 12,
             "name": "puddle",
-            "pic": "water.png",
-            "allow_dig": "False"
+            "pic": "puddle.png",
+            "allow_dig": "True",
+            "dig": {
+                "time": 1,
+                "after": "pit",
+                "loot": [
+                    {"id":5,"count": 1}
+                ]
+            }
         },
         {
             "id": 13,
@@ -258,7 +265,7 @@
         },
         {
             "id": 7,
-            "name": "metall",
+            "name": "metal",
             "pic": "metall.png",
             "demolition":2,
             "build": {
@@ -293,8 +300,8 @@
         },
         {
             "id": 10,
-            "name": "not_growed_corall",
-            "pic": "n_g_corall.png",
+            "name": "corall_spores",
+            "pic": "corall_spores.png",
             "demolition":1,
             "build": {
                 "water": {},
@@ -303,7 +310,7 @@
         },
         {
             "id": 11,
-            "name": "water_in_a_bucket",
+            "name": "bucket_of_water",
             "pic": "w_item.png",
             "demolition":0.2,
             "build": {
@@ -534,8 +541,8 @@
     "factory_type": [
         {
             "id": 0,
-            "name": "brickyard",
-            "info": "Кирпичный завод или кирпичное поле - это место или двор, где кирпичи изготавливаются, обжигаются и хранятся, а иногда продаются или иным образом распределяются.",
+            "name": "Brickyard",
+            "info": "With bricks to us opens a big world of possibilities",
             "dim": {
                 "w": 2,
                 "h": 2
@@ -547,7 +554,7 @@
             "pic": "brickyard.png",
             "use_recipes": 
             {
-                "allowed_id":[0,1],
+                "allowed_id":[0],
                 "selected_id":0
             },
             
@@ -556,8 +563,8 @@
         },
         {
             "id": 1,
-            "name": "quarry",
-            "info": "do not worry - work in a quarry",
+            "name": "Quarry",
+            "info": "The terrain on this planet have lot of clay in it, it can help with further advancement. Do not worry - work in a quarry",
             "dim": {
                 "w": 2,
                 "h": 2
@@ -568,7 +575,7 @@
             ],
             "use_recipes": 
             {
-                "allowed_id":[2,3],
+                "allowed_id":[2],
                 "selected_id":2
             },
             "pic": "quarry.png",
@@ -577,7 +584,8 @@
         },
         {
             "id": 2,
-            "name": "miller",
+            "name": "Industrial miller",
+            "info": "This building have enough power to grind hard materials",
             "dim": {
                 "w": 1,
                 "h": 3
@@ -598,7 +606,8 @@
         },
         {
             "id": 3,
-            "name": "moss_farm",
+            "name": "Moss farm",
+            "info":"The air is full of moss spores, it seems that in that moss is high percentage of oxygen. We can get profit out of it",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -620,7 +629,8 @@
         },
         {
             "id": 4,
-            "name": "mine",
+            "name": "Core mine",
+            "info":"The core of the planet has materials that can withstand the temperature to melt metal, and highly oxygenised moss will help us",
             "dim": {
                 "w": 3,
                 "h": 2
@@ -640,7 +650,8 @@
         },
         {
             "id": 5,
-            "name": "forge",
+            "name": "Forge",
+            "info": "With newly acquired metal we get endless possibilities",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -654,7 +665,7 @@
             "pic": "forge.png",
             "use_recipes": 
             {
-                "allowed_id":[7,22],
+                "allowed_id":[7,22,35],
                 "selected_id":22
             },
             "efficiency": 1,
@@ -662,7 +673,8 @@
         },
         {
             "id": 6,
-            "name": "plastic_factory",
+            "name": "Plastics factory",
+            "info": "With oily substances we can produce plastics - the stapel of advanced civilization",
             "dim": {
                 "w": 3,
                 "h": 5
@@ -685,7 +697,8 @@
         },
         {
             "id": 7,
-            "name": "roboport",
+            "name": "Roboport",
+            "info": "With roboports we can enlarge our territory of influence to expand our empire",
             "dim": {
                 "w": 3,
                 "h": 3
@@ -703,7 +716,8 @@
         },
         {
             "id": 8,
-            "name": "escape_pod",
+            "name": "Escape pod",
+            "info": "We saved ourselves, but we cut down from our commandment. We need to stand strong to survive and get out of here. They are waiting. How you even get there, you dataminer!",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -717,7 +731,8 @@
         },
         {
             "id": 9,
-            "name": "labaratory",
+            "name": "Sand research facility",
+            "info": "We spotted a biological presence in sand, we need to research it to get more information",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -735,13 +750,14 @@
             "operate": 3,
             "use_recipes": 
             {
-                "allowed_id":[9,21,20,19],
+                "allowed_id":[9],
                 "selected_id":9
             }
         },
         {
             "id": 10,
-            "name": "radar",
+            "name": "Radar",
+            "info": "We can't go blind, we need to know what is coming",
             "dim": {
                 "w": 3,
                 "h": 3
@@ -758,7 +774,8 @@
         },
         {
             "id": 11,
-            "name": "corall_farm",
+            "name": "Corall farm",
+            "info": "These corals may be useful for our further industrialization, need further research",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -780,7 +797,8 @@
         },
         {
             "id": 12,
-            "name": "pump",
+            "name": "Subsurface water pump",
+            "info": "Surface of this planet has a lot of moisture in it, we can use it to our advantage",
             "dim": {
                 "w": 3,
                 "h": 3
@@ -801,7 +819,8 @@
         },
         {
             "id": 13,
-            "name": "corall_press",
+            "name": "Corall press",
+            "info": "The corall block is proven to be very useful, to our surprise, in some contraptions",
             "dim": {
                 "w": 5,
                 "h": 5
@@ -824,7 +843,8 @@
         },
         {
             "id": 14,
-            "name": "moss_press",
+            "name": "Moss press",
+            "info": "If pressed corall is useful, why not try it with moss?",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -846,7 +866,8 @@
         },
            {
             "id": 15,
-            "name": "combiner",
+            "name": "Combiner",
+            "info": "The most powerful material, the stone-iron, marks the end of our struggles",
             "dim": {
                 "w": 7,
                 "h": 3
@@ -867,7 +888,8 @@
         },
         {
             "id": 16,
-            "name": "washer",
+            "name": "Power washer",
+            "info": "Sometimes we need more sand, and we have just the thing for it",
             "dim": {
                 "w": 5,
                 "h": 3
@@ -889,6 +911,7 @@
         {
             "id": 17,
             "name": "rocket_silo",
+            "info": "We need to get out of here, and we need to do it fast. They ARE waiting, but not for long",
             "dim": {
                 "w": 6,
                 "h": 4
@@ -910,7 +933,8 @@
         },
         {
             "id": 18,
-            "name": "observatory",
+            "name": "Observatory",
+            "info": "If we want to get out of here, we need to know how",
             "dim": {
                 "w": 8,
                 "h": 8
@@ -937,6 +961,7 @@
         {
             "id": 19,
             "name": "brick_compressor",
+            "info": "All-known strategy to get more out of any material. More durable - more everything",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -958,7 +983,8 @@
         },
         {
             "id": 20,
-            "name": "brickyard_2",
+            "name": "Advanced brickyard",
+            "info": "We need to improve our old, primitive technologies",
             "dim": {
                 "w": 2,
                 "h": 2
@@ -978,7 +1004,8 @@
         },
         {
             "id": 21,
-            "name": "quarry_2",
+            "name": "Advanced quarry",
+            "info": "Mining is never gets old",
             "dim": {
                 "w": 2,
                 "h": 2
@@ -999,7 +1026,8 @@
         },
         {
             "id": 22,
-            "name": "miller_2",
+            "name": "Gear miller",
+            "info": "With reductors we can get unthinkable power",
             "dim": {
                 "w": 1,
                 "h": 3
@@ -1012,7 +1040,7 @@
             "pic": "miller2.png",
             "use_recipes": 
             {
-                "allowed_id":[4,31],
+                "allowed_id":[4,30],
                 "selected_id":4
             },
             "efficiency": 2,
@@ -1020,7 +1048,8 @@
         },
         {
             "id": 23,
-            "name": "moss_farm_2",
+            "name": "Watring moss farm",
+            "info":"Expected water shenanigans, always tops biological production",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -1042,7 +1071,8 @@
         },
         {
             "id": 24,
-            "name": "mine2",
+            "name": "Enhanced core mine",
+            "info":"Little improvement here, little improvement there, and we get what we need",
             "dim": {
                 "w": 3,
                 "h": 2
@@ -1062,7 +1092,8 @@
         },
         {
             "id": 25,
-            "name": "forge2",
+            "name": "Hellforge",
+            "info": "With whis kind of power we can forge anything",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -1076,7 +1107,7 @@
             "pic": "forge2.png",
             "use_recipes": 
             {
-                "allowed_id":[7,22],
+                "allowed_id":[7,22,35],
                 "selected_id":22
             },
             "efficiency": 2,
@@ -1084,7 +1115,8 @@
         },
         {
             "id": 26,
-            "name": "plastic_factory2",
+            "name": "Plastics megafactory",
+            "info": "There is never enough plastics",
             "dim": {
                 "w": 3,
                 "h": 5
@@ -1107,7 +1139,8 @@
         },
         {
             "id": 27,
-            "name": "big_roboport",
+            "name": "Big roboport",
+            "info": "Big roboport for big territory control",
             "dim": {
                 "w": 3,
                 "h": 3
@@ -1124,7 +1157,8 @@
         },
         {
             "id": 28,
-            "name": "hub",
+            "name": "The Hub",
+            "info": "The Hub is multi-purpose building for expanding our ever growing empire",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -1139,12 +1173,13 @@
             "efficiency": 1,
             "demolition": 10,
             "storage":20,
-            "detect": 20,
-            "operate": 15
+            "detect": 25,
+            "operate": 20
         },
         {
             "id": 29,
-            "name": "labaratory_2",
+            "name": "Epic research facility",
+            "info": "All the data we'll ever need",
             "dim": {
                 "w": 4,
                 "h": 4
@@ -1168,7 +1203,8 @@
         },
         {
             "id": 30,
-            "name": "radar_2",
+            "name": "Quadradar",
+            "info": "The ultimate solution to our blindness",
             "dim": {
                 "w": 3,
                 "h": 3
@@ -1185,7 +1221,8 @@
         },
         {
             "id": 31,
-            "name": "suface_scanner",
+            "name": "Suface scanner",
+            "info": "We think that the surface is more than it seems",
             "dim": {
                 "w": 5,
                 "h": 5
@@ -1202,13 +1239,14 @@
             "demolition": 10.5,
             "use_recipes": 
             {
-                "allowed_id":[36],
-                "selected_id":36
+                "allowed_id":[29],
+                "selected_id":29
             }
         },
         {
             "id": 32,
-            "name": "scanner_3000",
+            "name": "the_ultimate_misshap",
+            "info": "Error, try again... We sailed through the space to find new planet for our dying civilization. Long time has passed, we don't know are there still our kind. We still recive signals from our homeworld, but there are only incoherent messages from the past,.. we think.",
             "dim": {
                 "w": 3,
                 "h": 3
@@ -1216,7 +1254,7 @@
             "plan": [
                 [18,18,18],
                 [18,19,18],
-                [18,18,18]
+                [18,18,0]
             ],
             "pic": "scanner_3000.png",
             "efficiency": 1,
@@ -1224,13 +1262,14 @@
             "detect": 20,
             "use_recipes": 
             {
-                "allowed_id":[37],
-                "selected_id":37
+                "allowed_id":[31],
+                "selected_id":31
             }
         },
         {
             "id": 33,
-            "name": "circuit_factory",
+            "name": "Circuit factory",
+            "info": "Another great invention, the basic circuit. Why only now?! So many years... It even may be irrelevant now",
             "dim": {
                 "w": 5,
                 "h": 3
@@ -1245,40 +1284,42 @@
             "demolition": 7.5,
             "use_recipes": 
             {
-                "allowed_id":[38],
-                "selected_id":38
+                "allowed_id":[32],
+                "selected_id":32
             }
         },
         {
             "id": 34,
-            "name": "compact_drill",
+            "name": "no_compact_drill",
+            "info": "This planet not so bad, as it seems. Maybe this is we was looking for?",
             "dim": {
-                "w": 1,
+                "w": 2,
                 "h": 2
             },
             "plan": [
-                [19],
-                [22]
+                [19,0],
+                [22,0]
             ],
             "pic": "c_drill.png",
             "efficiency": 1,
             "demolition": 1,
             "use_recipes": 
             {
-                "allowed_id":[5],
-                "selected_id":5
+                "allowed_id":[31],
+                "selected_id":31
             }
         },
         {
             "id": 35,
-            "name": "drill_factory",
+            "name": "no_drill_factory",
+
             "dim": {
                 "w": 3,
                 "h": 3
             },
             "plan": [
                 [14,19,8],
-                [14,19,8],
+                [14,0,8],
                 [14,8,7]
             ],
             "pic": "drill_f.png",
@@ -1286,13 +1327,14 @@
             "demolition": 7.5,
             "use_recipes": 
             {
-                "allowed_id":[39],
-                "selected_id":39
+                "allowed_id":[31],
+                "selected_id":31
             }
         },
         {
             "id": 36,
-            "name": "mega_pump",
+            "name": "Mega subsurface pump",
+            "info": "We need more water, they were true - water is life",
             "dim": {
                 "w": 5,
                 "h": 5
@@ -1309,13 +1351,14 @@
             "demolition": 10.5,
             "use_recipes": 
             {
-                "allowed_id":[40,12],
-                "selected_id":40
+                "allowed_id":[33,12],
+                "selected_id":33
             }
         },
         {
             "id": 37,
-            "name": "cosmic_forge",
+            "name": "Cosmic forge",
+            "info": "Maybe this amount of power will be enough to get us out of here",
             "dim": {
                 "w": 5,
                 "h": 5
@@ -1332,13 +1375,14 @@
             "demolition": 10.5,
             "use_recipes": 
             {
-                "allowed_id":[41],
-                "selected_id":41
+                "allowed_id":[34],
+                "selected_id":34
             }
         },
         {
             "id": 38,
-            "name": "oil_pump",
+            "name": "Electromagnetic oil pump",
+            "info": "Deep below the planet surface long ago there were lushy moss caves, now they are oil. And we need it",
             "dim": {
                 "w": 3,
                 "h": 3
@@ -1359,7 +1403,8 @@
         },
         {
             "id": 39,
-            "name": "oil_refinery",
+            "name": "Bio oil press",
+            "info": "Squeez the moss, squeeze the corall, although it is bio, it is still oil",
             "dim": {
                 "w": 4,
                 "h": 3
@@ -1377,33 +1422,12 @@
                 "allowed_id":[23,24],
                 "selected_id":23
             }
-        },
-        {
-            "id": 40,
-            "name": "workbench",
-            "dim": {
-                "w": 2,
-                "h": 3
-            },
-            "plan": [
-                [2,2],
-                [6,3],
-                [2,4]
-            ],
-            "pic": "workbench.png",
-            "efficiency": 1,
-            "demolition": 4.5,
-            "use_recipes": 
-            {
-                "allowed_id":[32,33,34,35],
-                "selected_id":32
-            }
         }
     ],
     "recipes" : [
       {
         "id":0,
-        "name":"firing_bricks",
+        "name":"Firing bricks",
         "pic": "b2.png",
         "time":5,
         "in": 
@@ -1423,7 +1447,7 @@
       },
       {
         "id":1,
-        "name":"firing_bricks_with_sand",
+        "name":"Firing bricks with sand",
         "pic": "b2.png",
         "time":5,
         "in": 
@@ -1443,7 +1467,7 @@
       },
       {
         "id":2,
-        "name":"mound_mining",
+        "name":"Basic mining",
         "pic": "mound.png",
         "time":5,
         "out":
@@ -1456,7 +1480,7 @@
       },
       {
         "id":3,
-        "name":"sand_mining",
+        "name":"Sand mining",
         "pic": "s_mound.png",
         "time":6,
         "out":
@@ -1563,7 +1587,7 @@
       {
         "id":9,
         "name":"coralls_finding",
-        "pic": "n_g_corall.png",
+        "pic": "corall_spores.png",
         "time":20,
         "in": 
         [              
@@ -2020,34 +2044,6 @@
       },
       { 
         "id":28,
-        "name":"circuit_printing",
-        "pic": "circuit.png",
-        "time":15,
-        "in": 
-        [
-            {
-                "id": 7,
-                "count": 1
-            },
-            {
-                "id": 8,
-                "count": 1
-            },
-            {
-                "id": 16,
-                "count": 1
-            }  
-        ],
-        "out":
-        [
-            {
-                "id": 19 , 
-                "count": 3
-            }
-        ]
-      },
-      { 
-        "id":29,
         "name":"suface_scanning",
         "pic": "p_data.png",
         "time":60,
@@ -2083,7 +2079,7 @@
         ]
       },
       { 
-        "id":30,
+        "id":29,
         "name":"space_rock_smelting",
         "pic": "alloy.png",
         "time":20,
@@ -2111,167 +2107,31 @@
         ]
       },
       { 
-        "id":31,
+        "id":30,
         "name":"stone_milling",
         "pic": "ore.png",
-        "time":12,
-        "in": 
-        [
-            {
-                "id": 6,
-                "count": 1
-            }
-        ],
-        "out":
-        [
-            {
-                "id": 5, 
-                "count": 4
-            }                     
-        ]
-      },
-      { 
-        "id":32,
-        "name":"stone_pickaxe_crafting",
-        "pic": "pickaxe.png",
         "time":10,
         "in": 
         [
             {
                 "id": 6,
-                "count": 8
-            },
-            {
-                "id": 3,
-                "count": 5
-            }
-        ],
-        "out":
-        [
-            {
-                "id": 26, 
-                "count": 1
-            }         
-        ]
-      },
-      { 
-        "id":33,
-        "name":"stone_hammer_crafting",
-        "pic": "hammer.png",
-        "time":10,
-        "in": 
-        [
-            {
-                "id": 6,
-                "count": 10
-            },
-            {
-                "id": 3,
-                "count": 4
-            },
-            {
-                "id": 2,
-                "count": 2
-            }
-        ],
-        "out":
-        [
-            {
-                "id": 27, 
-                "count": 1
-            }         
-        ]
-      },
-      { 
-        "id":34,
-        "name":"metall_pickaxe_crafting",
-        "pic": "m_pickaxe.png",
-        "time":15,
-        "in": 
-        [
-            {
-                "id": 7,
-                "count": 5
-            },
-            {
-                "id": 3,
-                "count": 6
-            },
-            {
-                "id": 2,
-                "count": 2
-            }
-        ],
-        "out":
-        [
-            {
-                "id": 28, 
-                "count": 1
-            }         
-        ]
-      },
-      { 
-        "id":35,
-        "name":"metall_hammer_crafting",
-        "pic": "m_hammer.png",
-        "time":15,
-        "in": 
-        [
-            {
-                "id": 7,
-                "count": 8
-            },
-            {
-                "id": 3,
-                "count": 5
-            },
-            {
-                "id": 2,
                 "count": 3
             }
         ],
         "out":
         [
             {
-                "id": 29, 
+                "id": 15, 
+                "count": 2
+            },
+            {
+                "id": 1, 
                 "count": 1
-            }         
+            }        
         ]
       },
       { 
-        "id":36,
-        "name":"surface_scanning",
-        "pic": "p_data.png",
-        "time":60,
-        "in": 
-        [
-            {
-                "id": 1,
-                "count": 50
-            },
-            {
-                "id": 5,
-                "count": 40
-            },
-            {
-                "id": 6,
-                "count": 30
-            },
-            {
-                "id": 16,
-                "count": 10
-            }
-        ],
-        "out":
-        [
-            {
-                "id": 20, 
-                "count": 1
-            }         
-        ]
-      },
-      { 
-        "id":37,
+        "id":31,
         "name":"planning",
         "pic": "d_structure.png",
         "time":1,
@@ -2284,7 +2144,7 @@
         ]
       },
       { 
-        "id":38,
+        "id":32,
         "name":"circuit_factoring",
         "pic": "circuit.png",
         "time":25,
@@ -2316,39 +2176,7 @@
         ]
       },
       { 
-        "id":39,
-        "name":"drill_production",
-        "pic": "drill.png",
-        "time":40,
-        "in": 
-        [
-            {
-                "id": 16,
-                "count": 3
-            },
-            {
-                "id": 7,
-                "count": 10
-            },
-            {
-                "id": 8,
-                "count": 3
-            },
-            {
-                "id": 14,
-                "count": 10
-            }
-        ],
-        "out":
-        [
-            {
-                "id": 22, 
-                "count": 1
-            }         
-        ]
-      },
-      { 
-        "id":40,
+        "id":33,
         "name":"mega_pumping",
         "pic": "water.png",
         "time":15,
@@ -2368,7 +2196,7 @@
         ]
       },
       { 
-        "id":41,
+        "id":34,
         "name":"alloy_forging",
         "pic": "alloy.png",
         "time":120,
@@ -2401,6 +2229,26 @@
                 "id":29,
                 "count":10
             }         
+        ]
+      },
+      {
+        "id":35,
+        "name":"primitive smelting",
+        "pic": "metall.png",
+        "time":20,
+        "in": 
+        [
+            {
+                "id": 6,
+                "count": 5
+            }
+        ],
+        "out":
+        [
+            {
+                "id": 7, 
+                "count": 1
+            }
         ]
       }
     ]
