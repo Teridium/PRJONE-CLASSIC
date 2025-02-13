@@ -533,11 +533,14 @@ class terrain:
                 counter = [humidity_id, humid_id]
                 for i in counter:
                     returnable = self.field[pos] == i
+                    if returnable is True: 
+                        return returnable
                 return returnable
             else:
                 return False
             
         result = False
+        result = _is_humide((pos[0], pos[1])) or result
         result = _is_humide((pos[0]-1, pos[1])) or result
         result = _is_humide((pos[0]+1, pos[1])) or result
         result = _is_humide((pos[0], pos[1]-1)) or result
