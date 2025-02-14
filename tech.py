@@ -18,9 +18,8 @@ class UI_tech_blueprints:
         self.wnd = gui.elements.UIWindow(pg.Rect(TECH_WND_RECT), 
                                          self.app.manager,
                                          'Чертежи технологий:',
-                                         visible=visible,
-                                         )
-        
+                                         visible=visible)
+
     def hide(self):
         self.wnd.hide()
         self.visible = False
