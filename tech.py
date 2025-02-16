@@ -303,7 +303,8 @@ class ui_tech:
 
         terrain_data = self.app.terrain.GetTData('id', select_terrain)
         terrain_name = terrain_data['name']
-        terrain_pic = self.app.terrain.field_img[select_terrain][0]
+        terrain_pic = self.app.data.data['terrain_type'][select_terrain]['img']
+        # terrain_pic = self.app.terrain.field_img[select_terrain][0]
 
         self.app.info.append_pic(terrain_pic)
         self.app.info.append_text(f'<b>{terrain_name}</b><br>{tilepos}</b>')

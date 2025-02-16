@@ -15,7 +15,7 @@ from factory import factory_list
 
 from info import info
 from options import *
-from utils import convert_opencv_img_to_pygame, cvimage_grayscale
+from utils import convert_to_grayscale
 from waterfall import *
 
 
@@ -111,21 +111,21 @@ class terrain:
         #    self.field[0,i] = 1
         #   self.field[99,i] = 1
 
-        self.field_img = [[0, 0] for i in self.data['terrain_type']]
-        for img in self.data['terrain_type']:
-            pic = pg.image.load(
-                path.join(img_dir, img['pic'])).convert_alpha()
-            cvimg = cv2.imread(path.join(img_dir, img['pic']))
-            gray_image = cvimage_grayscale(cvimg)
-            pic_gray = convert_opencv_img_to_pygame(gray_image)
-            self.field_img[img['id']][0] = pic
-            self.field_img[img['id']][1] = pic_gray
+        # self.field_img = [[0, 0] for i in self.data['terrain_type']]
+        # for img in self.data['terrain_type']:
+        #     pic = pg.image.load(
+        #         path.join(img_dir, img['pic'])).convert_alpha()
+        #     cvimg = cv2.imread(path.join(img_dir, img['pic']))
+        #     gray_image = cvimage_grayscale(cvimg)
+        #     pic_gray = convert_opencv_img_to_pygame(gray_image)
+        #     self.field_img[img['id']][0] = pic
+        #     self.field_img[img['id']][1] = pic_gray
 
-        self.block_img = [0 for i in self.data['block_type']]
-        for img in self.data['block_type']:
-            self.block_img[img['id']] = (pg.image.load(
-                path.join(img_dir, img['pic'])).convert_alpha())
-        self.block_img_rect = self.block_img[1].get_rect()
+        # self.block_img = [0 for i in self.data['block_type']]
+        # for img in self.data['block_type']:
+        #     self.block_img[img['id']] = (pg.image.load(
+        #         path.join(img_dir, img['pic'])).convert_alpha())
+        # self.block_img_rect = self.block_img[1].get_rect()
 
         self.field_bg = pg.image.load(
             path.join(img_dir, 'bg.jpg')).convert_alpha()
@@ -332,9 +332,9 @@ class terrain:
 
     def Get_img(self, item, b_type):
         if b_type == 'terrain':
-            return(self.field_img[item['id']][0])
+            return(self.app.data.data['terrain_type'][item['id']]['img'])
         elif b_type == 'block':
-            return(self.block_img[item['id']])
+            return(self.app.data.data['block_type'][item['id']]['img'])
 
     def update(self):
         if not self.app.is_modal(self): return
@@ -385,15 +385,18 @@ class terrain:
                 xyRect = pg.Rect(
                     (x-self.pos[0]+HALF_WIDTH)*TILE, (y-self.pos[1]+HALF_HIGHT)*TILE, TILE, TILE)
                 if self.field[x, y] > 0:
-                    if self.operate[x, y]:
-                        self.surface.blit(
-                            self.field_img[self.field[x, y]][0], xyRect)
+                    if self.operate[x, y]!=0:
+                        self.surface.blit(self.app.data.data['terrain_type'][self.field[x, y]]['img'], xyRect)
                     else:
-                        self.surface.blit(
-                            self.field_img[self.field[x, y]][1], xyRect)
+                        self.surface.blit(self.app.data.data['terrain_type'][self.field[x, y]]['img_bw'], xyRect)
                 if self.building_map[x, y] > 0:
-                    self.surface.blit(
-                        self.block_img[self.building_map[x, y]], xyRect)
+                    if self.operate[x, y]!=0:
+                        self.surface.blit(self.app.data.data['block_type'][self.building_map[x, y]]['img'], xyRect)
+                    else:
+                        self.surface.blit(self.app.data.data['block_type'][self.building_map[x, y]]['img_bw'], xyRect)
+
+                # if self.field[x, y] > 0 and self.operate[x, y]==0 and self.building_map[x, y] > 0:
+                #     pass
                 # self.app.info.debug(xyRect.move(0,P_UP), self.building_map[x,y])
 
         # draw factory
@@ -456,7 +459,7 @@ class terrain:
                     (x-self.pos[0]+HALF_WIDTH)*TILE, (y-self.pos[1]+HALF_HIGHT)*TILE, TILE, TILE)
 
                 if self.dark_cover[x, y]:
-                    self.surface.blit(self.field_img[0][0], xyRect)
+                    self.surface.blit(self.app.data.data['terrain_type'][0]['img'], xyRect)
 
         # draw in viewport
         self.app.screen.blit(self.surface, VIEW_RECT)

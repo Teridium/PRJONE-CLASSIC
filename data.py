@@ -7,7 +7,7 @@ import pygame as pg
 
 from options import *
 # from sequence import * 
-from utils import convert_opencv_img_to_pygame, cvimage_grayscale
+from utils import convert_to_grayscale
 
 
 class data:
@@ -70,8 +70,7 @@ class data:
 
         for item in self.data['terrain_type']:
             item['img'] = pg.image.load(path.join(img_dir, item['pic'])).convert_alpha()
-            cvimg = cv2.imread(path.join(img_dir, item['pic']))
-            item['img_bw'] = convert_opencv_img_to_pygame(cvimage_grayscale(cvimg))
+            item['img_bw'] = convert_to_grayscale(item['img'])
             
             img = pg.image.load(path.join(img_dir, item['pic'])).convert_alpha()
             blueprint = pg.Surface(img.get_size(), pg.SRCALPHA)
@@ -81,12 +80,14 @@ class data:
             
         for item in self.data['block_type']:
             item['img'] = (pg.image.load(path.join(img_dir, item['pic'])).convert_alpha())
+            item['img_bw'] = convert_to_grayscale(item['img'])
             
             img = pg.image.load(path.join(img_dir, item['pic'])).convert_alpha()
             blueprint = pg.Surface(img.get_size(), pg.SRCALPHA)
             blueprint.fill((255, 0, 0, 80))
             img.blit(blueprint, (0, 0), special_flags=pg.BLEND_RGBA_SUB)
             item['img_bp'] = img
+
             
         for item in self.data['factory_type']:
             item['img'] = (pg.image.load(path.join(img_dir, item['pic'])).convert_alpha())
